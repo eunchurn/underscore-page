@@ -14,7 +14,7 @@ p {
   line-height: 1.6;
 }
 a {
-  color: rgb(29, 29, 31);
+  /* color: rgb(29, 29, 31); */
   text-decoration: none;
 }
 body.before-load {
@@ -41,17 +41,21 @@ body.before-load {
   width: 100%;
   height: 52px;
   padding: 0 1rem;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 0px solid #ddd;
 }
 
 .local-nav-sticky .local-nav {
   position: fixed;
   top: 0;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.5);
   -webkit-backdrop-filter: saturate(180%) blur(15px);
   -moz-backdrop-filter: saturate(180%) blur(15px);
   -o-backdrop-filter: saturate(180%) blur(15px);
   backdrop-filter: saturate(180%) blur(15px);
+}
+.local-nav-sticky .local-nav .local-nav-links a {
+  color: rgb(29, 29, 31);
+  text-decoration: none;
 }
 .global-nav-links,
 .local-nav-links {
@@ -71,6 +75,8 @@ body.before-load {
 }
 .local-nav-links a {
   font-size: 0.8rem;
+  color: white;
+  text-decoration: none;
 }
 .local-nav-links a:not(.product-name) {
   margin-left: 2em;
