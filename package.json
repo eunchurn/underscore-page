@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "homepage": "https://eunchurn.github.io/underscore-page",
   "devDependencies": {
     "gh-pages": "^3.1.0",
     "parcel-bundler": "^1.12.4",
@@ -15,7 +16,7 @@
     "dev": "parcel ./src/index.html",
     "build": "parcel build ./src/index.html",
     "clean": "rimraf dist .cache",
-    "predeploy": "npm run clean && npm run build",
+    "predeploy": "npm run clean && parcel build ./src/index.html --public-url /underscore-page",
     "deploy": "gh-pages -d dist"
   },
   "staticFiles": {
