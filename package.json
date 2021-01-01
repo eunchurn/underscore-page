@@ -4,23 +4,19 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
-    "@babel/register": "^7.12.10",
-    "del": "^6.0.0",
-    "execa": "^5.0.0",
-    "gulp": "^4.0.2",
-    "gulp-babel": "^8.0.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-typescript": "^6.0.0-alpha.1",
-    "gulp-uglify": "^3.0.2",
+    "gh-pages": "^3.1.0",
     "parcel-bundler": "^1.12.4",
     "parcel-plugin-static-files-copy": "^2.5.0",
     "prettier": "^2.2.1",
+    "rimraf": "^3.0.2",
     "typescript": "^4.1.3"
   },
   "scripts": {
     "dev": "parcel ./src/index.html",
-    "accTest": "parcel ./src/smoothscroll.html",
-    "build": "parcel build ./src/index.html"
+    "build": "parcel build ./src/index.html",
+    "clean": "rimraf dist .cache",
+    "predeploy": "npm run clean && npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "staticFiles": {
     "staticPath": "public",
