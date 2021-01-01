@@ -21,4 +21,4 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 },{"./sceneInfo":"OmCM","./main":"RGUf","./setLayout":"crbO","./setCanvasImages":"Ji7b","./calcValue":"hDOa"}],"QCba":[function(require,module,exports) {
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0}),require("./js/init");
 },{"./js/init":"meeF"}]},{},["QCba"], null)
-//# sourceMappingURL=/src.69be6842.js.map
+//# sourceMappingURL=/underscore-page/src.69be6842.js.map
