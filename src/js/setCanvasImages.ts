@@ -6,7 +6,7 @@ export function setCanvasImages() {
   const values1 = sceneInfo[0].values as Section1Values;
   for (let i = 0; i < values1.videoImageCount; i++) {
     imgElem1 = new Image();
-    imgElem1.src = `./video/003/IMG-${27 + i}.JPG`;
+    imgElem1.src = `./video/003/IMG_${String(1 + i).padStart(3, "0")}.JPG`;
     objs1.videoImages.push(imgElem1);
   }
   let imgElem2;

@@ -19,7 +19,7 @@ export function setLayout(yOffset: number, currentScene: number) {
     }
   }
   document.body.setAttribute("id", `show-scene-${currentScene}`);
-  const heightRatio = window.innerHeight / 1080;
+  const heightRatio = Math.max(window.innerHeight / 1080, window.innerWidth / 1920);
   (sceneInfo[0].objs as Section1Objs).canvas.style.transform = `translate3d(-50%, -50%, 0) scale(${heightRatio})`;
   (sceneInfo[2].objs as Section2Objs).canvas.style.transform = `translate3d(-50%, -50%, 0) scale(${heightRatio})`;
 }

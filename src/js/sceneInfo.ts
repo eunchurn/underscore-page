@@ -124,8 +124,8 @@ export const sceneInfo: sceneInfo = [
       videoImages: [],
     } as Section1Objs,
     values: {
-      videoImageCount: 65,
-      imageSequence: { in: 0, out: 64, start: 0, end: 1 },
+      videoImageCount: 181,
+      imageSequence: { in: 0, out: 180, start: 0, end: 1 },
       canvas_opacity: { in: 1, out: 0, start: 0.9, end: 1 },
       messageA_opacity_in: { in: 0, out: 1, start: 0.1, end: 0.2 },
       messageA_opacity_out: { in: 1, out: 0, start: 0.25, end: 0.3 },
@@ -172,8 +172,8 @@ export const sceneInfo: sceneInfo = [
       videoImages: [],
     } as Section2Objs,
     values: {
-      videoImageCount: 59,
-      imageSequence: { in: 0, out: 58, start: 0, end: 1 },
+      videoImageCount: 58,
+      imageSequence: { in: 0, out: 57, start: 0, end: 1 },
       canvas_opacity_in: { in: 0, out: 1, start: 0, end: 0.1 },
       canvas_opacity_out: { in: 1, out: 0, start: 0.95, end: 1 },
       messageA_translateY_in: { in: 20, out: 0, start: 0.15, end: 0.2 },

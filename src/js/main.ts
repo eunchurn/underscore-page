@@ -47,7 +47,7 @@ export function playAnimation(yOffset: number, prevScrollHeight: number, current
       const triggerC = ((messageC_opacity_in.end || 0) + (messageC_opacity_out.start || 0)) / 2;
       const triggerD = ((messageD_opacity_in?.end || 0) + (messageD_opacity_out?.start || 0)) / 2;
       if (scene1) {
-        smoothingVideo(prevScrollHeight, imageSequence, videoImages, context);
+        smoothingVideo(prevScrollHeight, imageSequence, videoImages, canvas, context);
         scene1 = false;
       }
       // const sequence = Math.round(calcValues(imageSequence, currentYOffset, currentScene));
@@ -156,7 +156,7 @@ export function playAnimation(yOffset: number, prevScrollHeight: number, current
       const triggerB = ((messageB_opacity_in.end || 0) + (messageB_opacity_out.start || 0)) / 2;
       const triggerC = ((messageC_opacity_in.end || 0) + (messageC_opacity_out.start || 0)) / 2;
       if (scene2) {
-        smoothingVideo(prevScrollHeight, imageSequence, videoImages, context);
+        smoothingVideo(prevScrollHeight, imageSequence, videoImages, canvas, context);
         scene2 = false;
       }
       // const sequence = Math.round(calcValues(imageSequence, currentYOffset, currentScene));

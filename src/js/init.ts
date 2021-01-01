@@ -49,12 +49,17 @@ export function smoothingVideo(
   prevScrollHeight: number,
   imageSequence: ValueProps,
   videoImages: HTMLImageElement[],
+  canvas: HTMLCanvasElement,
   context: CanvasRenderingContext2D,
 ) {
   let acc = 0.1;
   let delayedYOffset = 0;
   let rafId;
   let rafState: boolean;
+  // const widthRatio = window.innerWidth / canvas.width;
+  // const heightRatio = window.innerHeight / canvas.height;
+  // const canvasScaleRatio = Math.max(widthRatio, heightRatio);
+  // canvas.style.transform = `scale(${canvasScaleRatio})`;
   function loop() {
     delayedYOffset = delayedYOffset + (pageYOffset - delayedYOffset) * acc;
     const currentYOffset = delayedYOffset - prevScrollHeight;
