@@ -109,12 +109,11 @@ function afterLoaded() {
   });
 }
 
-window.addEventListener("load", async () => {
-  await setCanvasImages();
-  setLayout(window.pageYOffset, currentScene);
+window.addEventListener("load", () => {
   document.body.classList.remove("before-load");
+
+  setLayout(window.pageYOffset, currentScene);
   const objs = sceneInfo[0].objs as Section1Objs;
-  console.log(objs.videoImages[0])
   objs.context.drawImage(objs.videoImages[0], 0, 0);
   let tempYOffset = pageYOffset;
   let tempScrollCount = 0;
@@ -129,4 +128,5 @@ window.addEventListener("load", async () => {
   }
   afterLoaded();
 });
+setCanvasImages();
 setLayout(window.pageYOffset, currentScene);
