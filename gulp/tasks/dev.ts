@@ -2,11 +2,7 @@ import gulp from "gulp";
 import browserify from "browserify";
 import tsify from "tsify";
 import source from "vinyl-source-stream";
-import ts from "gulp-typescript";
-import imagemin from "gulp-imagemin";
-import changed from "gulp-changed";
 import autoprefixer from "gulp-autoprefixer";
-import csso from "gulp-csso";
 import bs from "browser-sync";
 import config from "../config";
 import { clean } from "./clean";
@@ -14,17 +10,7 @@ import { clean } from "./clean";
 const browserSync = bs.create();
 const reload = browserSync.reload;
 
-// const tsProject = ts.createProject("./tsconfig.json", config.ts.options);
-
-// export const tsc = gulp.task("tsc", function () {
-//   return gulp
-//     .src(config.ts.src)
-//     .pipe(tsProject())
-//     .js.pipe(gulp.dest(config.ts.dest))
-//     .pipe(reload({ stream: true }));
-// });
-
-export const tsc = gulp.task("tsc", function () {
+gulp.task("build-dev", function () {
   return browserify(config.browserify.entry)
     .plugin(tsify)
     .bundle()
@@ -48,7 +34,7 @@ function watch(task: string, watchFiles: string[]) {
   });
 }
 
-gulp.task("watch-tsc", () => watch("tsc", config.ts.watchFiles));
+gulp.task("watch-tsc", () => watch("tsc", config.browserify.watchFiles));
 
 export const brows = gulp.task("browserify", function () {
   return browserify(config.browserify.entry)
@@ -57,52 +43,35 @@ export const brows = gulp.task("browserify", function () {
     .pipe(gulp.dest(config.browserify.dest));
 });
 
-gulp.task("imagemin", function () {
-  return gulp
-    .src(config.assets.src)
-    .pipe(changed(config.assets.dest))
-    .pipe(
-      imagemin(
-        [
-          imagemin.gifsicle({ interlaced: true }),
-          imagemin.mozjpeg({ quality: 75, progressive: true }),
-          imagemin.optipng({ optimizationLevel: 5 }),
-          imagemin.svgo({
-            plugins: [{ removeViewBox: true }, { cleanupIDs: false }],
-          }),
-        ],
-        { verbose: true },
-      ),
-    )
-    .pipe(gulp.dest(config.assets.dest));
+gulp.task("copyPublic", function () {
+  return gulp.src(config.assets.src).pipe(gulp.dest(config.assets.dest));
 });
-gulp.task("html", function () {
+
+gulp.task("html-dev", function () {
   return gulp
     .src(config.html.src)
     .pipe(gulp.dest(config.html.dest))
     .pipe(reload({ stream: true }));
 });
 
-gulp.task("css", function () {
+gulp.task("css-dev", function () {
   return gulp
     .src(config.css.src)
     .pipe(autoprefixer())
-    .pipe(csso())
     .pipe(gulp.dest(config.css.dest))
     .pipe(reload({ stream: true }));
 });
 
-gulp.task("default", function () {
-  // Serve files from the dist of this project
+gulp.task("devServer", function () {
   browserSync.init({
     server: {
       baseDir: "./dist",
     },
   });
-  watch("tsc", config.ts.watchFiles);
-  watch("html", config.html.watchFiles);
-  watch("css", config.css.watchFiles);
-  watch("imagemin", config.assets.watchFiles);
+  watch("build-dev", config.browserify.watchFiles);
+  watch("html-dev", config.html.watchFiles);
+  watch("css-dev", config.css.watchFiles);
+  watch("copyPublic", config.assets.watchFiles);
 });
 
-export const dev = gulp.series("tsc", "imagemin", "html", "css", "default");
+export const dev = gulp.series(clean, "build-dev", "copyPublic", "html-dev", "css-dev", "devServer");

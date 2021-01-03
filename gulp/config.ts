@@ -3,15 +3,9 @@ import path from "path";
 const dest = "./dist";
 const src = "./src";
 const assetsSrc = "./public";
-const relativeSrcPath = path.relative(".", src);
 
 export default {
-  minify: {
-    src: dest + "/js/*.js",
-    dest: dest + "/js/min",
-  },
   assets: {
-    // src: path.join(assetsSrc, "**/*.+(png|jpg|gif|JPG|PNG|GIF|JPEG)"),
     src: path.join(assetsSrc, "**/*"),
     dest: path.join(dest, assetsSrc),
     watchFiles: [path.join(assetsSrc, "**/*.{png,jpg,gif,jpeg,JPG,PNG,GIF,JPEG}")],
@@ -24,34 +18,24 @@ export default {
   css: {
     src: path.join(src, "**/*.{css,scss}"),
     dest,
-    watchFiles: [path.join(src, "**/*.{css,scss")],
-  },
-  ts: {
-    src: path.join(src, "**/*.ts"),
-    dest: dest,
-    watchFiles: [path.join(src, "**/*.{js,jsx,ts,tsx}"), `!${path.join(src, "**/*test.{js,jsx,ts,tsx}")}`],
-    options: {
-      declaration: true,
-      noImplicitAny: true,
-      target: "ES3",
-      module: "commonjs",
-    },
+    watchFiles: [path.join(src, "**/*.{css,scss}")],
   },
   browserify: {
     entry: {
       entries: path.join(src, "index.ts"),
       debug: true,
+      cache: {},
+      packageCache: {},
     },
-    // entry: {
-    //   entries: dest + "/index.js",
-    //   debug: true,
-    // },
     dest: dest,
     output: {
       filename: "bundle.js",
     },
+    watchFiles: [path.join(src, "**/*.{js,jsx,ts,tsx}"), `!${path.join(src, "**/*test.{js,jsx,ts,tsx}")}`],
   },
-  watch: {
-    ts: relativeSrcPath + "/ts/*.ts",
-  },
+  deploy: {
+    remoteUrl: "git@github.com-eunchurn:eunchurn/underscore-page.git",
+    origin: "origin",
+    deployBranch: "gh-pages"
+  }
 };
