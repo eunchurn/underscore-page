@@ -206,7 +206,7 @@ export const sceneInfo: sceneInfo = [
       canvasCaption: document.querySelector(".canvas-caption"),
       canvas: document.querySelector(".image-blend-canvas"),
       context: (document.querySelector(".image-blend-canvas") as HTMLCanvasElement).getContext("2d"),
-      imagesPath: ["./images/EPAS.JPG", "./images/MullaeInstant.png"],
+      imagesPath: ["./public/images/EPAS.JPG", "./public/images/MullaeInstant.png"],
       images: [],
     } as Section3Objs,
     values: {

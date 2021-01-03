@@ -56,6 +56,7 @@ export function scene3(
     recalculatedInnerHeight,
   );
   if (scrollRatio < rect1X.end) {
+    console.log(rect1X.end, scrollRatio)
     canvas.classList.remove("sticky");
   } else {
     imageBlendHeight.out = canvas.height;

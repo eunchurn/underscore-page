@@ -1,6 +1,6 @@
 import { sceneInfo, Section1Objs, Section2Objs } from "./sceneInfo";
 
-export function setLayout(yOffset: number, currentScene: number) {
+export async function setLayout(yOffset: number, currentScene: number) {
   // 각 스크롤 섹션의 높이 세팅
   sceneInfo.map((item) => {
     if (item.type === "sticky") {
@@ -10,7 +10,16 @@ export function setLayout(yOffset: number, currentScene: number) {
     }
     item.objs.container.style.height = `${item.scrollHeight}px`;
   });
+  async function getCurrentScene() {
+    let totalScrollHeight = 0;
+    for await (const scene of sceneInfo) {
+      
+    }
+  }
   let totalScrollHeight = 0;
+  for await (const scene of sceneInfo) {
+
+  }
   for (let i = 0; i < sceneInfo.length; i++) {
     totalScrollHeight += sceneInfo[i].scrollHeight;
     if (totalScrollHeight >= yOffset) {
