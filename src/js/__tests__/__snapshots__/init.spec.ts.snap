@@ -1,0 +1,465 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`app snapshot 1`] = `
+<body
+  class="before-load"
+>
+  
+    
+  <div
+    class="loading"
+  >
+    
+      
+    <svg
+      class="loading-circle"
+    >
+      
+        
+      <circle
+        cx="50%"
+        cy="50%"
+        r="25"
+      />
+      
+      
+    </svg>
+    
+    
+  </div>
+  
+    
+  <div
+    class="container"
+  >
+    
+      
+    <nav
+      class="global-nav"
+    >
+      
+        
+      <div
+        class="global-nav-links"
+      />
+      
+      
+    </nav>
+    
+      
+    <nav
+      class="local-nav"
+    >
+      
+        
+      <div
+        class="local-nav-links"
+      >
+        
+          
+        <a
+          class="product-name"
+          href="#"
+        >
+          underscore
+        </a>
+        
+          
+        <a
+          href="#"
+        >
+          about
+        </a>
+        
+          
+        <a
+          href="#"
+        >
+          works
+        </a>
+        
+          
+        <a
+          href="#"
+        >
+          more
+        </a>
+        
+          
+        <a
+          href="#"
+        >
+          contact
+        </a>
+        
+        
+      </div>
+      
+      
+    </nav>
+    
+      
+    <section
+      class="scroll-section"
+      id="scroll-section-0"
+      style="height: 3840px;"
+    >
+      
+        
+      <h1
+        style="color: white"
+      >
+        underscore
+      </h1>
+      
+        
+      <div
+        class="sticky-elem sticky-elem-canvas"
+      >
+        
+          
+        <canvas
+          height="1080"
+          id="video-canvas-0"
+          width="1920"
+        />
+        
+        
+      </div>
+      
+        
+      <div
+        class="sticky-elem main-message a"
+      >
+        
+          
+        <p>
+          "underscore"
+        </p>
+        
+          
+        <p
+          style="font-weight: 400"
+        >
+          
+            We set problems through reading and underscoring, and carry out research upon those problems.
+          
+        </p>
+        
+        
+      </div>
+      
+        
+      <div
+        class="sticky-elem main-message b"
+      >
+        
+          
+        <p>
+          "____________"
+        </p>
+        
+          
+        <p
+          style="font-weight: 400"
+        >
+          We connect the conceptual to the sensible.
+        </p>
+        
+        
+      </div>
+      
+        
+      <div
+        class="sticky-elem main-message c"
+      >
+        
+          
+        <p>
+          "______score"
+        </p>
+        
+          
+        <p
+          style="font-weight: 400"
+        >
+          We deal with scores as what enable future performances as aesthetic forms.
+        </p>
+        
+        
+      </div>
+      
+        
+      <div
+        class="sticky-elem main-message d"
+      >
+        
+          
+        <p>
+          "(working) under (the) score"
+        </p>
+        
+          
+        <p
+          style="font-weight: 400"
+        >
+          We carry out performances following the scores.
+        </p>
+        
+        
+      </div>
+      
+      
+    </section>
+    
+      
+    <section
+      class="scroll-section"
+      id="scroll-section-1"
+      style="height: 0px;"
+    >
+      
+        
+      <p
+        class="description"
+      >
+        
+          
+        <strong>
+          보통 스크롤 영역
+        </strong>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, aliquid
+          doloremque. Perferendis aliquam fuga magni, ratione fugit error cupiditate voluptas, tenetur aspernatur enim
+          ullam dignissimos voluptatum tempora debitis officiis eligendi odio distinctio architecto sapiente! Facilis
+          nihil odit suscipit quibusdam vitae nesciunt autem asperiores molestiae quaerat tenetur ab quis harum amet,
+          ratione deserunt, commodi animi eveniet necessitatibus! Earum magnam ad, nam placeat consequuntur natus
+          explicabo deserunt. Deserunt nulla veritatis corrupti pariatur illum error deleniti? Doloremque accusantium,
+          minus quibusdam ex laborum ut est enim repellat! Voluptate commodi quidem mollitia animi itaque aperiam saepe
+          amet nemo odit soluta in provident numquam veritatis quos beatae vitae maxime minima, ipsam eum perferendis
+          quisquam corporis id illo? Dolorum, illum? Temporibus neque aliquam rem, consectetur maxime optio fuga eius
+          aut, at quasi voluptatem est eos voluptatum dolorem ipsam dolorum fugiat architecto illo! Sint, pariatur amet
+          doloremque rem odit dolorem corporis.
+        
+      </p>
+      
+      
+    </section>
+    
+      
+    <section
+      class="scroll-section"
+      id="scroll-section-2"
+      style="height: 3840px;"
+    >
+      
+        
+      <div
+        class="sticky-elem sticky-elem-canvas"
+      >
+        
+          
+        <canvas
+          height="1080"
+          id="video-canvas-1"
+          width="1920"
+        />
+        
+        
+      </div>
+      
+        
+      <div
+        class="sticky-elem main-message a"
+      >
+        
+          
+        <p>
+          <small>
+            Artistic research
+          </small>
+          <small>
+            Performance
+          </small>
+        </p>
+        
+        
+      </div>
+      
+        
+      <div
+        class="sticky-elem desc-message b"
+      >
+        
+          
+        <p>
+          <small>
+            Text
+          </small>
+          <small>
+            Sound
+          </small>
+        </p>
+        
+          
+        <div
+          class="pin"
+        />
+        
+        
+      </div>
+      
+        
+      <div
+        class="sticky-elem desc-message c"
+      >
+        
+          
+        <p>
+          <small>
+            Choreography
+          </small>
+          <small>
+            Image
+          </small>
+        </p>
+        
+          
+        <div
+          class="pin"
+        />
+        
+        
+      </div>
+      
+      
+    </section>
+    
+      
+    <section
+      class="scroll-section"
+      id="scroll-section-3"
+      style="height: 3840px;"
+    >
+      
+        
+      <p
+        class="mid-message"
+      >
+        
+          
+        <strong>
+          Featured Project
+        </strong>
+        <br />
+        
+          Exercise in Performing Arts Studies Sep 2017 | SNU College of Humanities Building 8
+        
+      </p>
+      
+        
+      <canvas
+        class="image-blend-canvas"
+        height="1080"
+        width="1920"
+      />
+      
+        
+      <p
+        class="mid-message"
+      >
+        
+          
+        <strong>
+          Featured Project
+        </strong>
+        <br />
+        
+          #mullae_instant Jul - Oct 2019 | Online and Mullae Area
+        
+      </p>
+      
+        
+      <p
+        class="canvas-caption"
+      >
+        
+          #mullae_instant explores the modus operandi of an art “work”. It traces how the various activities of creation
+          taking place in Mullae, a space of the real, come to be saved, circulated, reproduced and dispersed through
+          the cyber space, a visual field to be manipulated as well as an apparatus that mediates them all.
+          #mullaeinstant_ is thus an experiment on the physical/conceptual elasticity of the stage. It has been selected
+          as part of “2019 MEET” organized by Seoul Foundation of Arts and Culture and Seoul Art Space Mullae, and
+          sponsored by GS SHOP.
+        
+      </p>
+      
+      
+    </section>
+    
+      
+    <section
+      class="normal-content"
+    >
+      
+        
+      <p
+        class="mid-message"
+      >
+        
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, voluptatum sequi. Nostrum sapiente vel maxime
+          assumenda molestias id doloribus facilis ipsam dolores, iste quos, natus a libero quas nulla obcaecati quaerat
+          impedit minima veritatis ab ducimus ex, voluptatum earum quae! Minima autem aspernatur dicta! Nam id libero
+          eveniet voluptate distinctio? Est ullam exercitationem praesentium corrupti reprehenderit tenetur atque
+          dolore, perspiciatis esse placeat asperiores a, voluptate accusamus fugiat, nemo dolorum! Eaque rerum nihil
+          sed quibusdam placeat, fuga doloremque ullam perspiciatis suscipit id at ipsa possimus aliquam quam unde
+          voluptas praesentium, veniam reprehenderit dolorem? Iste nostrum doloremque aspernatur ipsam, dolorem
+          cupiditate nesciunt.
+        
+      </p>
+      
+      
+    </section>
+    
+      
+    <section
+      class="normal-content"
+    >
+      
+        
+      <p
+        class="mid-message"
+      >
+        
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, voluptatum sequi. Nostrum sapiente vel maxime
+          assumenda molestias id doloribus facilis ipsam dolores, iste quos, natus a libero quas nulla obcaecati quaerat
+          impedit minima veritatis ab ducimus ex, voluptatum earum quae! Minima autem aspernatur dicta! Nam id libero
+          eveniet voluptate distinctio? Est ullam exercitationem praesentium corrupti reprehenderit tenetur atque
+          dolore, perspiciatis esse placeat asperiores a, voluptate accusamus fugiat, nemo dolorum! Eaque rerum nihil
+          sed quibusdam placeat, fuga doloremque ullam perspiciatis suscipit id at ipsa possimus aliquam quam unde
+          voluptas praesentium, veniam reprehenderit dolorem? Iste nostrum doloremque aspernatur ipsam, dolorem
+          cupiditate nesciunt.
+        
+      </p>
+      
+      
+    </section>
+    
+      
+    <footer
+      class="footer"
+    >
+      2020
+    </footer>
+    
+    
+  </div>
+  
+    
+  <script
+    src="./bundle.js"
+  />
+  
+  
+
+
+</body>
+`;

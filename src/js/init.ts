@@ -56,12 +56,8 @@ export function smoothingVideo(
   let delayedYOffset = 0;
   let rafId;
   let rafState: boolean;
-  // const widthRatio = window.innerWidth / canvas.width;
-  // const heightRatio = window.innerHeight / canvas.height;
-  // const canvasScaleRatio = Math.max(widthRatio, heightRatio);
-  // canvas.style.transform = `scale(${canvasScaleRatio})`;
   function loop() {
-    delayedYOffset = delayedYOffset + (pageYOffset - delayedYOffset) * acc;
+    delayedYOffset = delayedYOffset + (scrollY - delayedYOffset) * acc;
     const currentYOffset = delayedYOffset - prevScrollHeight;
     if (currentScene === 0 || currentScene === 2) {
       const sequence = Math.round(calcValues(imageSequence, currentYOffset, currentScene));
@@ -71,7 +67,7 @@ export function smoothingVideo(
     }
 
     rafId = requestAnimationFrame(loop);
-    if (Math.abs(pageYOffset - delayedYOffset) < 1) {
+    if (Math.abs(scrollY - delayedYOffset) < 1) {
       cancelAnimationFrame(rafId);
       rafState = false;
     }
@@ -115,7 +111,7 @@ window.addEventListener("load", () => {
   setLayout(window.pageYOffset, currentScene);
   const objs = sceneInfo[0].objs as Section1Objs;
   objs.context.drawImage(objs.videoImages[0], 0, 0);
-  let tempYOffset = pageYOffset;
+  let tempYOffset = scrollY;
   let tempScrollCount = 0;
   if (tempYOffset > 0) {
     let siId = setInterval(() => {
