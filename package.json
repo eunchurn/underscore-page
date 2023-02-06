@@ -30,7 +30,7 @@
     "@types/gulp-imagemin": "8.0.1",
     "@types/gulp-minify": "3.1.1",
     "@types/jest": "29.4.0",
-    "@types/jsdom": "^20.0.0",
+    "@types/jsdom": "^21.0.0",
     "@types/node": "18.11.19",
     "@types/vinyl-buffer": "1.0.0",
     "@types/vinyl-source-stream": "0.0.30",
